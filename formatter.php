@@ -7,11 +7,13 @@
      <title>E-book Formatter</title>
 
      <link href='http://fonts.googleapis.com/css?family=Inconsolata|Fjalla+One|Domine' rel='stylesheet' type='text/css'>
-     <link rel="stylesheet" type="text/css" href="style.css"/>
+     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+     <link rel="stylesheet" type="text/css" href="css/universal.css"/>
 
-     <script src="http://code.jquery.com/jquery-latest.min.js"
-        type="text/javascript"></script>
+     <script src="http://code.jquery.com/jquery-latest.min.js"type="text/javascript"></script>
      <script type="text/javascript" src="js/functions.js"></script>
+     <script type="text/javascript" src="js/universal.js"></script>
+
 
      <script src="js/colors/jquery.minicolors.js"></script>
      <link rel="stylesheet" href="js/colors/jquery.minicolors.css">
@@ -20,7 +22,7 @@
      <body>
           <?php 
                $directory = $_GET["story"];
-               echo '<script type="text/javascript">var directory = "' . $directory . '";</script>'               
+               echo '<script type="text/javascript">var directory = "books/' . $directory . '";</script>'               
           ?>
           <div class="controls">
                <form method="post" action="createBook.php">
@@ -52,7 +54,7 @@
                          <div class="row">
                               <label class="col-6"> Header Font:</label>
                               <select class="font" name="h1,h2,h3,h4,h5,h6/font-family" onchange="change('h1,h2,h3,h4,h5,h6', 'font-family', this.value,'')">         
-                                   <?php include 'fonts.php'; ?>
+                                   <?php include 'includes/fonts.php'; ?>
                               </select>
                          </div>
 
@@ -70,10 +72,12 @@
                               </select>
                          </div>
 
+                         <hr />
+
                          <div class="row">
                               <label class="col-6"> Body Font:</label>
                               <select class="font" name="p/font-family" onchange="change('p', 'font-family', this.value,'')">
-                                   <?php include 'fonts.php'; ?>
+                                   <?php include 'includes/fonts.php'; ?>
                               </select>
                          </div>
 
@@ -98,6 +102,11 @@
                                    <option>pt</option>
                                    <option selected>em</option>
                               </select>
+                         </div>
+
+                         <div class="row">
+                              <label class="col-6"> Line Height:</label>
+                              <input type="number" name="p/line-height" value ="130" alt="%" class="half" onchange="change('p', 'line-height', this.value, $(this).attr('alt'))"/> %
                          </div>
                          <hr/>
                     </div>
@@ -155,11 +164,23 @@
                          <div class="row">
                               <label class="col-6"> Width:</label>
                               <input type="number" name="img/width" value ="50" alt="%" class="half" onchange="change('img', 'width', this.value, $(this).attr('alt'))"/>
-                              <select class="units" name="img/width/unit">
+                              <!--<select class="units" name="img/width/unit">
                                    <option>px</option>
                                    <option>em</option>
                                    <option selected>%</option>
-                              </select>
+                              </select>-->
+                              %
+                         </div>
+                         <hr/>
+                    </div>
+
+                    <div class="section">
+                         <img src="imgs/plus.png" class="plus" />
+                         <span class="head">Miscellaneous</span>
+
+                         <div class="row">
+                              <label class="col-6"> Show Bookmark Menu</label>
+                              <input type="checkbox" name="bookmarks"/>
                          </div>
                          <hr/>
                     </div>

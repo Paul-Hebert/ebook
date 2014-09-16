@@ -1,0 +1,38 @@
+.hidden{
+	display:none;
+}
+
+img.plus{
+	float:left;
+	height:30px;
+	width:30px;
+	cursor:pointer;
+}
+
+.rotated{
+	-moz-transform:rotate(45deg);
+}
+
+.rotate{
+	-moz-animation: rotate steps(16) .3s 1; 
+}
+
+@-moz-keyframes rotate {
+	from { -moz-transform:rotate(0deg) }
+    to { -moz-transform:rotate(45deg) }
+}
+
+.rotateBack{
+	-moz-animation: rotateBack steps(16) .3s 1; 
+}
+
+@-moz-keyframes rotateBack {
+    from { -moz-transform:rotate(45deg) }
+    to { -moz-transform:rotate(0deg) }
+}
+
+.section{
+	max-height:50px;
+	overflow:hidden;
+}
+
