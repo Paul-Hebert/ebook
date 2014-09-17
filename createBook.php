@@ -1,22 +1,16 @@
 <?php
 	$directory = htmlspecialchars($_POST['directory']);
-	$ourFileName = 'themes/theme1.php';
+	$id = 1;
+	$dir = opendir('css/themes/');
+
+	while ($read = readdir($dir)){
+		if ($read!='.' && $read!='..'){
+				$id++;
+			}
+		}
+	$ourFileName = 'css/themes/theme' . $id . '.css';
+	
 	$handle = fopen($ourFileName, 'w+') or die("can't open file");
-	fwrite($handle, '<!DOCTYPE html>
-	<html>
-		<head>
-			<?php 
-				$story = $_GET["story"];
-				$story2 = str_replace("_", " ", $story);
-				echo \'<title>\' . $story2 . \'</title>\' ;
-			?>
-			<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-			<script type="text/javascript" src="../js/theme.js"></script>
-			<?php echo \'<script type="text/javascript">directory = "../books/\' . $story . \'"</script>\' ?>
-			<script type="text/javascript" src="../js/universal.js"></script>
-			<link rel="stylesheet" type="text/css" href="../css/universal.css"/>
-			<link rel="stylesheet" type="text/css" href="../css/theme.css"/>
-			<style type="text/css">');
 					fwrite($handle, '.story{');
 						fwrite($handle, 'margin: 0 auto;');
 						fwrite($handle, 'width:' . htmlspecialchars($_POST["/width"])  . htmlspecialchars($_POST["/width/unit"]) . ';');
@@ -35,6 +29,7 @@
 						fwrite($handle, 'font-size:' . htmlspecialchars($_POST["p/font-size"]) . htmlspecialchars($_POST["p/font-size/unit"]) . ';');
 						fwrite($handle, 'text-indent:' . htmlspecialchars($_POST["p/text-indent"]) . htmlspecialchars($_POST["p/text-indent/unit"]) . ';');
 						fwrite($handle, 'line-height:' . htmlspecialchars($_POST["p/line-height"]) . '%;');
+						fwrite($handle, 'padding-top:' . htmlspecialchars($_POST["p/padding-top"]) . htmlspecialchars($_POST["p/padding-top/unit"]) . ';');
 					fwrite($handle, '}
 
 					div{');
@@ -49,27 +44,16 @@
 						$margin = (100 - htmlspecialchars($_POST["img/width"]))/2 . htmlspecialchars($_POST["img/width/unit"]);
 						fwrite($handle, 'margin-left:' . $margin . ';');
 					fwrite($handle, '}');
-			fwrite($handle, '</style>
-		</head>
-		<body>');
-			if ( $_POST['bookmarks'] == true){
-				fwrite($handle,'<div class="section bookmark ">
-					<img src="../imgs/plus.png" class="plus"/>
-					<span onclick="makeBookmark();">Set</span>
-					<br />
-					<span onclick="getBookmark();">Get</span>
-				</div>');
-			}
-			fwrite($handle,'<div class="story">
-				<?php
-					include "../books/" . $story . "/story.php";
-				?>
-			</div>
-		</body>
-	</html>');
+
+					if($_POST['bookmarks'] != true){
+						fwrite($handle, '.bookmark{
+							display:none;
+						}');
+					}
+		
 	fclose($handle);
 
 	echo '<script type="text/javascript">
-		window.location="themes/theme1.php?story=' . $directory . '";
+		window.location="viewer.php?story=' . $directory . '&id=' . $id . '";
 	</script>';
 ?>

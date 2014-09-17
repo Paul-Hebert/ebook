@@ -108,6 +108,15 @@
                               <label class="col-6"> Line Height:</label>
                               <input type="number" name="p/line-height" value ="130" alt="%" class="half" onchange="change('p', 'line-height', this.value, $(this).attr('alt'))"/> %
                          </div>
+
+                         <div class="row">
+                              <label class="col-6"> Paragraph Spacing:</label>
+                              <input type="number" name="p/padding-top" value ="15" alt="pt" class="half" onchange="change('p', 'padding-top', this.value, $(this).attr('alt'))"/>
+                              <select class="units" name="p/padding-top/unit">
+                                   <option>pt</option>
+                                   <option>em</option>
+                              </select>
+                         </div>
                          <hr/>
                     </div>
 

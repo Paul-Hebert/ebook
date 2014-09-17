@@ -6,20 +6,22 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/universal.css"/>	</head>
 	<body>
+		<h1>Pick a theme or create your own:</h1>
 			<?php				
 				$sub = $_GET['story'];
-				$dir = opendir('themes/');
-				echo '<ul>';
+				$dir = opendir('css/themes/');
+				$id = 1;
 
 				while ($read = readdir($dir)){
 					if ($read!='.' && $read!='..')
 					{
-						echo '<li><a href="themes/' . $read . '?story=' . $sub . '">' . $read . '</a></li>';
+						echo '<a href="viewer.php?story=' . $sub . '&id=' . $id . '"><div class="theme">' . $read . '</div></a>';
+						$id++;
 					}
 				}
-						echo '<li><a href="formatter.php?story=' . $sub . '"> Custom Theme </a></li>';
+						echo '<div class="or">or</div>
+						<a href="formatter.php?story=' . $sub . '"><div class="theme"> Custom Theme </div></a>';
 
-				echo '</ul>';
 				closedir($dir); 
 			?>
 	</body>

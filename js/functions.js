@@ -19,4 +19,7 @@ $(function (){
 
 function change(selector,property,value,units){
 	$('.story ' + selector).css(property,value + units);
+	if(selector == 'img' && property == 'width'){
+		$('.story img').css('margin-left', ((100-value)/2) + '%')
+	}
 }

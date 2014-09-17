@@ -1,0 +1,11 @@
+.story{margin: 0 auto;width:900px;background:#ffffff;}
+
+					h1,h2,h3,h4,h4,h6{font-family:Arial;color:#b39d9d;font-size:30pt;}
+
+					p{font-family:Arial;color:#000000;font-size:14pt;text-indent:2em;line-height:130%;}
+
+					div{margin-left:20%;margin-right:20%;margin-top:50px;margin-bottom:50px;}
+
+					img{width:50;margin-left:25;}.bookmark{
+							display:none;
+						}
