@@ -126,8 +126,8 @@
 
                          <div class="row">
                               <label class="col-6"> Left Margin:</label>
-                              <input type="number" name="div/margin-left" value ="20" alt="%" class="half" onchange="change('div', 'margin-left', this.value, $(this).attr('alt'))"/>
-                              <select class="units" name="div/margin-left/unit">
+                              <input type="number" name="div/padding-left" value ="20" alt="%" class="half" onchange="change('div', 'padding-left', this.value, $(this).attr('alt'))"/>
+                              <select class="units" name="div/padding-left/unit">
                                    <option>px</option>
                                    <option>em</option>
                                    <option selected>%</option>
@@ -136,8 +136,8 @@
 
                          <div class="row">
                               <label class="col-6"> Right Margin:</label>
-                              <input type="number" name="div/margin-right" value ="20" alt="%" class="half" onchange="change('div', 'margin-right', this.value, $(this).attr('alt'))"/>
-                              <select class="units" name="div/margin-right/unit">
+                              <input type="number" name="div/padding-right" value ="20" alt="%" class="half" onchange="change('div', 'padding-right', this.value, $(this).attr('alt'))"/>
+                              <select class="units" name="div/padding-right/unit">
                                    <option>px</option>
                                    <option>em</option>
                                    <option selected>%</option>
@@ -146,8 +146,8 @@
 
                          <div class="row">
                               <label class="col-6"> Top Margin:</label>
-                              <input type="number" name="div/margin-top" value ="50" alt="px" class="half" onchange="change('div', 'margin-top', this.value, $(this).attr('alt'))"/>
-                              <select class="units" name="div/margin-top/unit">
+                              <input type="number" name="div/padding-top" value ="50" alt="px" class="half" onchange="change('div', 'padding-top', this.value, $(this).attr('alt'))"/>
+                              <select class="units" name="div/padding-top/unit">
                                    <option>px</option>
                                    <option>em</option>
                                    <option >%</option>
@@ -156,8 +156,8 @@
 
                          <div class="row">
                               <label class="col-6"> Bottom Margin:</label>
-                              <input type="number" name="div/margin-bottom" value ="50" alt="px" class="half" onchange="change('div', 'margin-bottom', this.value, $(this).attr('alt'))"/>
-                              <select class="units" name="div/margin-bottom/unit">
+                              <input type="number" name="div/padding-bottom" value ="50" alt="px" class="half" onchange="change('div', 'padding-bottom', this.value, $(this).attr('alt'))"/>
+                              <select class="units" name="div/padding-bottom/unit">
                                    <option>px</option>
                                    <option>em</option>
                                    <option>%</option>

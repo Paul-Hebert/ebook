@@ -11,10 +11,13 @@
 	$ourFileName = 'css/themes/theme' . $id . '.css';
 	
 	$handle = fopen($ourFileName, 'w+') or die("can't open file");
+					fwrite($handle, 'body{');
+						fwrite($handle, 'background:' . htmlspecialchars($_POST["/background"]) . ';');
+					fwrite($handle, '}');
+
 					fwrite($handle, '.story{');
 						fwrite($handle, 'margin: 0 auto;');
 						fwrite($handle, 'width:' . htmlspecialchars($_POST["/width"])  . htmlspecialchars($_POST["/width/unit"]) . ';');
-						fwrite($handle, 'background:' . htmlspecialchars($_POST["/background"]) . ';');
 					fwrite($handle, '}
 
 					h1,h2,h3,h4,h4,h6{');
@@ -32,17 +35,17 @@
 						fwrite($handle, 'padding-top:' . htmlspecialchars($_POST["p/padding-top"]) . htmlspecialchars($_POST["p/padding-top/unit"]) . ';');
 					fwrite($handle, '}
 
-					div{');
-						fwrite($handle, 'margin-left:' . htmlspecialchars($_POST["div/margin-left"]) . htmlspecialchars($_POST["div/margin-left/unit"]) . ';');
-						fwrite($handle, 'margin-right:' . htmlspecialchars($_POST["div/margin-right"]) . htmlspecialchars($_POST["div/margin-right/unit"]) . ';');
-						fwrite($handle, 'margin-top:' . htmlspecialchars($_POST["div/margin-top"]) . htmlspecialchars($_POST["div/margin-top/unit"]) . ';');
-						fwrite($handle, 'margin-bottom:' . htmlspecialchars($_POST["div/margin-bottom"]) . htmlspecialchars($_POST["div/margin-bottom/unit"]) . ';');
+					.story div{');
+						fwrite($handle, 'padding-left:' . htmlspecialchars($_POST["div/padding-left"]) . htmlspecialchars($_POST["div/padding-left/unit"]) . ';');
+						fwrite($handle, 'padding-right:' . htmlspecialchars($_POST["div/padding-right"]) . htmlspecialchars($_POST["div/padding-right/unit"]) . ';');
+						fwrite($handle, 'padding-top:' . htmlspecialchars($_POST["div/padding-top"]) . htmlspecialchars($_POST["div/padding-top/unit"]) . ';');
+						fwrite($handle, 'padding-bottom:' . htmlspecialchars($_POST["div/padding-bottom"]) . htmlspecialchars($_POST["div/padding-bottom/unit"]) . ';');
 					fwrite($handle, '}
 
 					img{');
 						fwrite($handle, 'width:' . htmlspecialchars($_POST["img/width"]) . htmlspecialchars($_POST["img/width/unit"]) . ';');
 						$margin = (100 - htmlspecialchars($_POST["img/width"]))/2 . htmlspecialchars($_POST["img/width/unit"]);
-						fwrite($handle, 'margin-left:' . $margin . ';');
+						fwrite($handle, 'padding-left:' . $margin . ';');
 					fwrite($handle, '}');
 
 					if($_POST['bookmarks'] != true){

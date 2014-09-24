@@ -1,11 +1,11 @@
-.story{margin: 0 auto;width:900px;background:#ffffff;}
+body{background:#e9f0f2;}
 
-					h1,h2,h3,h4,h4,h6{font-family:Arial;color:#b39d9d;font-size:30pt;}
+.story{margin: 0 auto;width:900px;}
 
-					p{font-family:Arial;color:#000000;font-size:14pt;text-indent:2em;line-height:130%;}
+					h1,h2,h3,h4,h4,h6{font-family:Trebuchet MS;color:#3b3b3b;font-size:30pt;}
 
-					div{margin-left:20%;margin-right:20%;margin-top:50px;margin-bottom:50px;}
+					p{font-family:Palatino Linotype;color:#1f1f1f;font-size:15pt;text-indent:2em;line-height:118%;padding-top:0pt;}
 
-					img{width:50;margin-left:25;}.bookmark{
-							display:none;
-						}
+					div{margin-left:12%;margin-right:12%;margin-top:50px;margin-bottom:50px;}
+
+					img{width:70;margin-left:15;}

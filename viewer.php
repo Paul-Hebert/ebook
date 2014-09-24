@@ -10,7 +10,7 @@
 			?>
 			<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 			<script type="text/javascript" src="js/theme.js"></script>
-			<?php echo '<script type="text/javascript">directory = "books/' . $story . '"</script>' ?>
+			<?php echo '<script type="text/javascript">directory = "books/' . $story . '"; theme = "' . $theme . '";</script>' ?>
 			<script type="text/javascript" src="js/universal.js"></script>
 			<link rel="stylesheet" type="text/css" href="css/universal.css"/>
 			<link rel="stylesheet" type="text/css" href="css/theme.css"/>

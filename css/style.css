@@ -16,23 +16,24 @@ h1, h2, h3, h4, h5, h6, .head{
 /* Index */
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
 
-.book{
-	display:block;
-}
-
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
 /* Theme-picker */
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
 
 .theme{
 	width:120px;
-	height:200px;
+	height:220px;
 	border:1px #ccc solid;
 	background:#fff;
 	float:left;
 	margin:20px;
-	text-align:center;
 	padding:10px;
+}
+
+.theme img{
+	height:170px;
+	width:auto;
+	margin:0 auto;
 }
 
 .theme:hover{
@@ -44,8 +45,31 @@ h1, h2, h3, h4, h5, h6, .head{
 	text-align:center;
 	float:left;
 	font-family: Arial, sans-serif;
-	position:relative;
-	top:100px;
+	width:100%;
+	text-align: center;
+}
+
+.themeHolder{
+	width:730px;
+	margin:0 auto;
+}
+
+.themeHolder h1{
+	text-align:center;
+}
+
+.themeRow{
+	height:280px;
+	width:100%;
+	overflow:hidden;
+}
+
+.caption{
+	text-align:center;
+}
+
+.custom{
+	margin-left:305px;
 }
 
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -53,7 +77,7 @@ h1, h2, h3, h4, h5, h6, .head{
 /*///////////////////////////////////////////////////////////////////////////////////////////*/
 
 .controls{
-	width:24%;
+	width:314px;
 	position:fixed;
 }
 
@@ -123,10 +147,9 @@ input[type="submit"]{
 
 .story{
 	width:900px;
-	float:left;
 	background:#fff;
 	position:absolute;
-	left:27%;
+	left:315px;
 	border:2px solid #ccc;
 }
 
@@ -136,10 +159,10 @@ input[type="submit"]{
 	
 	
 .story div{
-	margin-top:50px;
-	margin-left: 20%;
-	margin-right: 20%;
-	margin-bottom:50px;
+	padding-top:50px;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom:50px;
 }
 	
 	

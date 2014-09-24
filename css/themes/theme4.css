@@ -1,11 +1,11 @@
-.story{margin: 0 auto;width:900px;background:#ffffff;}
+body{background:#f5f5f0;}.story{margin: 0 auto;width:1000px;}
 
 					h1,h2,h3,h4,h4,h6{font-family:Arial;color:#000000;font-size:30pt;}
 
-					p{font-family:Arial;color:#000000;font-size:14pt;text-indent:2em;line-height:130%;}
+					p{font-family:Arial;color:#000000;font-size:14pt;text-indent:2em;line-height:130%;padding-top:15pt;}
 
-					div{margin-left:20%;margin-right:20%;margin-top:50px;margin-bottom:50px;}
+					.story div{padding-left:20%;padding-right:20%;padding-top:50px;padding-bottom:50px;}
 
-					img{width:80;margin-left:10;}.bookmark{
+					img{width:50;padding-left:25;}.bookmark{
 							display:none;
 						}
