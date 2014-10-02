@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="utf-8">
 			<?php 
 				$story = $_GET["story"];
 				$theme = $_GET["id"];

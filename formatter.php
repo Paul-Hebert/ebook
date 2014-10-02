@@ -25,6 +25,10 @@
                echo '<script type="text/javascript">var directory = "books/' . $directory . '";</script>'               
           ?>
           <div class="controls">
+               <?php //include('includes/sidebar.php');?>
+
+               <!--<hr />-->
+
                <form method="post" action="createBook.php">
                     <div class="section">
                          <?php echo '<input type="text" class="hidden" name="directory" value="' . $directory . '" />'?>

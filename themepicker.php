@@ -6,6 +6,10 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/universal.css"/>	</head>
 	<body>
+		<div class="controls">
+			<?php include('includes/sidebar.php');?>
+		</div>
+		
 		<div class="themeHolder">
 			<h1>Pick a theme or create your own:</h1>
 			<div class="themeRow">

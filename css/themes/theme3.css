@@ -4,7 +4,7 @@ body{background:#e9f0f2;}
 
 					h1,h2,h3,h4,h4,h6{font-family:Trebuchet MS;color:#3b3b3b;font-size:30pt;}
 
-					p{font-family:Palatino Linotype;color:#1f1f1f;font-size:15pt;text-indent:2em;line-height:118%;padding-top:0pt;}
+					p, .story *{font-family:Palatino Linotype;color:#1f1f1f;font-size:15pt;text-indent:2em;line-height:118%;padding-top:0pt;}
 
 					div{margin-left:12%;margin-right:12%;margin-top:50px;margin-bottom:50px;}
 

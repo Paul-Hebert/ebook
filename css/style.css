@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, .head{
 	width:120px;
 	height:220px;
 	border:1px #ccc solid;
-	background:#fff;
+	background:#faf0f0;
 	float:left;
 	margin:20px;
 	padding:10px;
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, .head{
 }
 
 .theme:hover{
-	background:#faf0f0;
+	background:#D0E2E8;
 }
 
 .or{
@@ -51,7 +51,10 @@ h1, h2, h3, h4, h5, h6, .head{
 
 .themeHolder{
 	width:730px;
-	margin:0 auto;
+	position:absolute;
+	left:315px;
+	background:#fff;
+	border: 1px solid #ccc;
 }
 
 .themeHolder h1{
@@ -79,6 +82,15 @@ h1, h2, h3, h4, h5, h6, .head{
 .controls{
 	width:314px;
 	position:fixed;
+}
+
+.controls a{
+	display:block;
+	padding:5px;
+	padding-left:10px;
+	border-top:1px solid #ccc;
+	width:300px;
+	margin-top:2px;
 }
 
 .section .row{

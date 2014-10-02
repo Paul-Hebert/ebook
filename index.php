@@ -7,8 +7,12 @@
 		<link rel="stylesheet" type="text/css" href="css/universal.css"/>
 	</head>
 	<body>
+		<div class="controls">
+			<?php include('includes/sidebar.php');?>
+		</div>
+				
 		<div class="themeHolder">
-		<h1>Pick a book:</h1>
+			<h1>Pick a book:</h1>
 			<?php
 				$dir = opendir('books/');
 

@@ -26,7 +26,7 @@
 						fwrite($handle, 'font-size:' . htmlspecialchars($_POST["h1,h2,h3,h4,h5,h6/font-size"]) . htmlspecialchars($_POST["h1,h2,h3,h4,h5,h6/font-size/unit"]) . ';');
 					fwrite($handle, '}
 
-					p{');
+					p, .story *:not(hr){');
 						fwrite($handle, 'font-family:' . htmlspecialchars($_POST["p/font-family"]) . ';');
 						fwrite($handle, 'color:' . htmlspecialchars($_POST["p/color"]) . ';');
 						fwrite($handle, 'font-size:' . htmlspecialchars($_POST["p/font-size"]) . htmlspecialchars($_POST["p/font-size/unit"]) . ';');
